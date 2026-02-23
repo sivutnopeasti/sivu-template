@@ -128,4 +128,9 @@ Aloita VÄLITTÖMÄSTI ensimmäisellä tiedostolla. Älä kirjoita johdantoa.
 [JavaScript-koodi tähän]
 ```
 
-Liitteenä lomake csv tiedostona. Noudata lomakkeen tyylejä täsmällisesti.
+## TÄRKEÄÄ - RAJOITUKSET
+
+- Älä kirjoita mitään muuta kuin pyydetyt 3 tiedostoa
+- Älä selitä valintojasi
+- Älä toista asiakkaan tietoja erikseen
+- Aloita suoraan === index.html === merkillä
