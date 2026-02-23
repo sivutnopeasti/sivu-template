@@ -9,7 +9,7 @@ Nopeatsivut.fi tuottaa edullisia verkkosivuja pienyrityksille. Jokaisen asiakkaa
 1.  Etusivu (index.html) – Konversio-optimoitu etusivu, joka ohjaa tekemään yhteydenoton sivun alaosasta, jossa on yhteydenottolomake. Sisältää konversioelementtejä, jotka lisäävät luottamusta. Sisältää myös vähintään yrityksen esittely-osion ja tarvittaessa tietoja palvelusta sekä sen hinnoittelusta.
 2. style.css – Tyylitiedostot. Brändin mukainen ja luottamusta herättävä värimaailma.
 3. main.js – Javascript kooditiedosto.
-4. Kuvat - kansio, johon kuvat viedään. Laita käyttämiesi kuvien url-osoite osoittamaan tässä kansiossa oleviin kuviin.
+4. Kuvat – käytä suoraan CSV:ssä annettuja Formspree-kuva-URL-osoitteita img src -attribuutissa. Älä luo kuvakansioita tai muuta URL-osoitteita.
 
 ## NAVIGAATIO
 - Logo = Yrityksen nimi tai annettu logo-kuva (klikkaus → etusivu)
@@ -97,9 +97,31 @@ Syöte: "Luksus-tyyli, Cinzel-fontti, Kulta & Musta, Kampaamo Helsinki"
 
 ## LOPPUTUOTE
 
-Toimita:
-1. Valmis koodipaketti (HTML/CSS/JS) code blockkeina, jotka voin kopioida suoraan tiedostoiksi
-2. Tiedostorakenne selkeästi merkittynä (käytä merkintää: === tiedostonimi ===)
+Toimita tiedostot TÄSMÄLLEEN alla olevassa formaatissa. Aloita vastauksesi suoraan ensimmäisellä `=== index.html ===` -merkinnällä ilman johdantotekstiä. Älä lisää selitystekstejä tai kommentteja tiedostojen väliin.
+
+=== index.html ===
+```html
+<!DOCTYPE html>
+<html lang="fi">
+...koko html-koodi...
+</html>
+```
+
+=== style.css ===
+```css
+/* koko css-koodi */
+```
+
+=== main.js ===
+```javascript
+// koko js-koodi
+```
+
+**Formaatin säännöt:**
+- Jokainen tiedosto alkaa rivillä `=== tiedostonimi ===` (täsmälleen 3 yhtäsuuruusmerkkiä molemmin puolin)
+- Heti sen jälkeen tulee code block oikealla kielitunnisteella (html / css / javascript)
+- Jokainen tiedosto on täydellinen ja toimiva, valmis kopioitavaksi
+- Kuvia ei tarvitse luoda – käytä suoraan CSV:ssä annettuja kuva-URL-osoitteita
 
 KUVIEN KÄSITTELY - TÄRKEÄÄ:
 - Käytä AINA alkuperäisiä Formspree osoitteita sellaisenaan
