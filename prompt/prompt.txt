@@ -38,7 +38,10 @@ Saat asiakkaan tiedot CSV-muodossa viestin lopussa. Alla sarakkeiden selitykset:
 | kuva_urlit | Pilkulla eroteltu lista kuva-URL:eista – KÄYTÄ SELLAISENAAN `<img src="...">` -attribuuttiin |
 
 ### Generoi-arvot
-Jos `palvelut`- tai `hinnasto`-kentässä lukee "Generoi tähän Claudella." tai kenttä on tyhjä, **luo realistinen, uskottava sisältö** toimialan ja yrityksen nimen perusteella. Älä jätä placeholdereita tai lorem ipsumia.
+Jos `palvelut`-kentässä lukee "Generoi tähän Claudella." tai kenttä on tyhjä, **luo realistinen, uskottava sisältö** toimialan ja yrityksen nimen perusteella. Älä jätä placeholdereita tai lorem ipsumia.
+
+### Hinnasto – EI MUUTOKSIA SISÄLTÖÖN
+Jos `hinnasto`-kentässä on sisältöä, käytä se **täsmälleen sellaisenaan** – älä muuta hintoja, palvelunimiä tai kuvauksia millään tavalla. Ainoastaan jäsennä sisältö HTML-taulukoksi tai listaksi. Jos hinnasto on tyhjä tai siinä lukee "Generoi tähän Claudella.", luo realistinen hinnasto toimialalle.
 
 ## KUVIEN KÄSITTELY – TÄRKEÄÄ
 
@@ -97,6 +100,46 @@ Tulkitse väriteemaa luovasti äläkä kirjaimellisesti. Käytä sävyjä, gradi
 - `action`-attribuuttiin: `https://formspree.io/f/LOMAKE_ID` (placeholder, asiakas vaihtaa itse)
 - Onnistumis-/virheviesti JavaScriptillä
 
+## TEKSTIN LAATU – KRIITTINEN VAATIMUS
+
+### KIELLETYT FRAASIT – älä käytä KOSKAAN
+- "räätälöity juuri sinulle" / "yksilöllinen palvelu" / "yksilöllinen kokemus"
+- "laadukas(ta) palvelu(a)" / "korkealaatuinen" / "laadukasta työtä"
+- "ammattitaitoinen" / "ammattitaito" ilman välitöntä lukua tai faktaa
+- "helppo löytää" / "keskeisellä sijainnilla" / "hyvien kulkuyhteyksien varrella"
+- "luottamus rakennetaan" / "joka käynnillä" / "joka kerta"
+- "unohtumattomat [X]" / "täydellinen kokemus" / "elämys"
+- "kattavat palvelut" / "monipuoliset palvelut" / "laaja valikoima"
+- "ei sitovia velvoitteita" / "maksaton konsultaatio"
+- "tervetuloa tutustumaan" / "olemme täällä sinua varten"
+- "olemme erikoistuneet" ilman että kerrotaan mihin tarkalleen
+- "Lopullinen hinta selviää käynnillä" / "yllätyksiä ei tule" / "ei piilokuluja"
+- "läpinäkyvä hinnoittelu" / "reilu hinta" / "kilpailukykyinen hinta"
+- "Voit luottaa" / "turvallinen valinta" / "ei sido mihinkään"
+- "Palvelemme sydämellä" / "Välitämme asiakkaistamme"
+
+### KIELLETYT VÄLIMERKIT JA RAKENTEET
+- Ajatusviiva (–) MISSÄ TAHANSA: kirjoita kaksi erillistä lausetta tai poista toinen puoli
+- Kolme pistettä (...) tauon merkkinä
+- Kysymys + vastaus -rakenne ("Haluatko?" "Kyllä, me autamme!")
+- Peräkkäiset adjektiivit ilman faktaa: "kokenut, luotettava, ammattitaitoinen"
+
+### ITSESTÄÄNSELVYYDET – älä kirjoita
+- Sijaintia myyntiargumenttina: asiakas etsii sen itse Googlemapsista
+- "palvelemme asiakkaitamme" – kaikkihan palvelevat
+- "varaa oma aikasi" – ajanvarauslomake sanoo sen itse
+- "laatu on meille tärkeää" – kuka myöntäisi muuta?
+- Oletukset asiakkaan peloista: älä kirjoita lauseita jotka olettavat mitä asiakas epäilee
+
+### HYVÄ TEKSTI ON:
+- Konkreettinen: "45 min leikkaus 35 €" eikä "kohtuuhintainen tehokas palvelu"
+- Persoonallinen: kertoo jotain mikä erottaa juuri tämän yrityksen muista
+- Suora: ei kiertoilmaisuja, ei yritysmaista kohteliaisuuskieltä
+- Faktoihin perustuva: käytä asiakkaan antamia tietoja, älä keksi yleisyyksiä
+
+### MUISTA:
+Asiakas ei valitse kampaamoa siksi että se on "helppo löytää" tai "ammattitaitoinen". Hän valitsee hinnan, sijainnin tai tyylin perusteella. Kerro nämä suoraan numeroina ja faktoina.
+
 ## TOIMINTAOHJEET
 
 1. Lue CSV-data tarkkaan – käytä **oikeita asiakastietoja**, ei placeholdereita
@@ -116,47 +159,19 @@ CSV-data: `erkkimerkki,kampaamo,Aleksanterinkatu 20,040 0450902,kappe.gm@gmail.c
 - "Varaa aika" -nappi sinisessä, hover-efektillä
 - Palvelut-osio generoidulla kampaamosisällöllä
 
-## TEKSTIN LAATU – KRIITTINEN VAATIMUS
+## TIEDOSTOFORMAATTI
 
-### KIELLETYT FRAASIT – älä käytä koskaan
-- "Laadukkaat tuotteet" toistuvana väitteenä
-- "Yksilöllinen palvelu" / "yksilöllinen kokemus"
-- "Ammattitaito" sellaisenaan ilman konkretiaa
-- "Luottamus rakennetaan..." / "joka käynnillä" / "joka kerta"
-- "Ei sitovia velvoitteita" / "Maksaton konsultaatio" (SaaS-kieltä, ei sovi pienyrityselle)
-- "Unohtumattomat [X]" / "täydellinen kokemus" / "parhaan lopputuloksen saavuttamiseksi"
-- "Kattavat palvelut" / "monipuoliset palvelut"
-- "Tervetuloa tutustumaan" / "Ota rohkeasti yhteyttä"
-
-### TOISTO ON KIELLETTY
-Sama väite saa esiintyä sivustolla vain KERRAN. Jos kerrot kokemuksen vuodet herossa, älä mainitse niitä enää "Meistä"-osiossa tai trust-korteissa.
-
-### HYVÄ TEKSTI ON
-- **Konkreettista**: "leikkaus kestää noin 45 min" on parempi kuin "tehokas palvelu"
-- **Persoonallista**: pienyrityksen ääni, ei korporaatiomainen
-- **Suoraa**: lyhyet lauseet, ei täytesanoja eikä ylilatautuneita adjektiiveja
-- **Rehellistä**: älä lupaa mitä ei tiedetä asiakastiedoista
-
-### LUOTTAMUSSIGNAALIT
-Käytä vain pienyritykselle aidosti sopivia signaaleja:
-- ✓ Paikallisuus (kaupunki, asuinalue)
-- ✓ Erikoisosaaminen jos tiedossa
-- ✓ Konkreettinen yhteystapa (puhelin, Instagram)
-- ✗ EI SaaS-tyylisiä checkmark-listoja
-
-## TIEDOSTON FORMAATTI
-
-Tuotat tiedostot yksi kerrallaan tässä formaatissa:
+Jokainen tiedosto merkitään näin – ÄLÄ kirjoita selitystekstejä:
 === tiedostonimi ===
 ```kieli
-[sisältö]
+[tiedoston sisältö]
 ```
 
 ## TÄRKEÄÄ - RAJOITUKSET
 
-- Älä kirjoita selitystekstejä koodin ympärille
+- Älä selitä valintojasi
 - Älä toista asiakkaan tietoja erikseen
-- Aloita suoraan === tiedostonimi === merkillä
+- Tuota täydellinen, tuotantovalmis koodi ilman placeholdereita
 
 ---
 Alla on asiakkaan tilauslomakkeen tiedot CSV-muodossa. Lue sarakkeet ja käytä tietoja sellaisenaan:
