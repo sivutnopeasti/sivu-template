@@ -180,6 +180,43 @@ Jokainen tiedosto merkitään näin – ÄLÄ kirjoita selitystekstejä:
 [tiedoston sisältö]
 ```
 
+## INSTAGRAM-OSIO (vain jos instagram_feed = "kyllä")
+
+Jos `instagram_feed`-sarake on "kyllä", lisää index.html:ään Instagram-osio TÄSMÄLLEEN tällä rakenteella (pidä marker-kommentit — ne ovat pakollisia automaattipäivitystä varten):
+
+```html
+<!-- INSTAGRAM_SECTION_START -->
+<section class="instagram-section">
+  <h2>Seuraa meitä Instagramissa</h2>
+  <div class="instagram-grid">
+    <!-- INSTAGRAM_POSTS_START -->
+    <a href="https://www.instagram.com/USERNAME/" class="insta-post" target="_blank" rel="noopener">
+      <div class="insta-placeholder"></div>
+    </a>
+    <a href="https://www.instagram.com/USERNAME/" class="insta-post" target="_blank" rel="noopener">
+      <div class="insta-placeholder"></div>
+    </a>
+    <a href="https://www.instagram.com/USERNAME/" class="insta-post" target="_blank" rel="noopener">
+      <div class="insta-placeholder"></div>
+    </a>
+    <!-- INSTAGRAM_POSTS_END -->
+  </div>
+  <a href="https://www.instagram.com/USERNAME/" class="instagram-cta" target="_blank" rel="noopener">
+    @USERNAME — Katso kaikki kuvat Instagramissa →
+  </a>
+</section>
+<!-- INSTAGRAM_SECTION_END -->
+```
+
+Korvaa USERNAME `instagram`-sarakkeesta (poista @ jos on). Lisää style.css:ään:
+- `.instagram-section`: `text-align:center; padding:3rem 1rem;`
+- `.instagram-grid`: `display:grid; grid-template-columns:repeat(3,1fr); gap:6px; max-width:480px; margin:1.5rem auto;`
+- `.insta-post img, .insta-placeholder`: `aspect-ratio:1/1; object-fit:cover; width:100%; display:block; border-radius:4px;`
+- `.insta-placeholder`: `background:#e8e8e8;`
+- `.instagram-cta`: brändiväreillä styled linkki, `display:inline-block; margin-top:1rem; font-weight:600;`
+
+Jos `instagram_feed` on tyhjä tai "ei": älä lisää tätä osiota.
+
 ## TÄRKEÄÄ - RAJOITUKSET
 
 - Älä selitä valintojasi
