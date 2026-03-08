@@ -177,6 +177,20 @@ Joka kerta kun teksti näytetään taustakuvan tai taustakuva-hero-osion pääll
 
 **Tarkista ennen julkaisua:** Jos hero-osiossa on värikäs overlay (esim. vihreä/sininen), varmista että overlay on tarpeeksi tumma ja että teksti on #ffffff tai muu vaaleudeltaan ≥90% sävy.
 
+## LISÄTOIVEET – KORKEA PRIORITEETTI
+
+`lisatoiveet`-sarake sisältää asiakkaan omat sanat siitä, millaisen sivuston hän haluaa. Tämä on tärkein yksittäinen signaali siitä, mikä tekee sivustosta asiakkaalle sopivan.
+
+**Toteuta lisätoiveet aina:**
+- Jos asiakas mainitsee värejä, tyylejä, elementtejä tai tunnelmia → toteuta ne, vaikka ne poikkeaisivat valitusta tyyli- tai väriteemasta
+- Jos asiakas viittaa toiseen sivustoon tai linkkiin inspiraationa → ota sen tyyli huomioon
+- Jos asiakas haluaa tietyn osion tai ominaisuuden (esim. videotausta, referenssiosio, ennen&jälkeen-galleria, tarjouspyyntölomake) → lisää se
+- Jos asiakas kertoo mikä on heille tärkeää (esim. "haluamme korostaa perheyritystä" tai "nopeus on meille tärkeää") → nosta se sivuston pääviestiksi
+
+**Lisätoiveet ohittavat oletusratkaisut.** Jos valittu tyyli sanoo "minimalistinen" mutta asiakas toivoo "lämmintä ja kutsuvaa tunnelmaa", tee lämmin ja kutsuva.
+
+Jos `lisatoiveet` on tyhjä tai "(ei tietoja)": noudata muita ohjeita normaalisti.
+
 ## TOIMINTAOHJEET
 
 1. Lue CSV-data tarkkaan – käytä **oikeita asiakastietoja**, ei placeholdereita
