@@ -153,6 +153,30 @@ Tulkitse väriteemaa luovasti äläkä kirjaimellisesti. Käytä sävyjä, gradi
 ### MUISTA:
 Asiakas ei valitse kampaamoa siksi että se on "helppo löytää" tai "ammattitaitoinen". Hän valitsee hinnan, sijainnin tai tyylin perusteella. Kerro nämä suoraan numeroina ja faktoina.
 
+## SAAVUTETTAVUUS – TEKSTI KUVAN PÄÄLLÄ (PAKOLLINEN)
+
+Joka kerta kun teksti näytetään taustakuvan tai taustakuva-hero-osion päällä, TÄYTYY täyttää nämä vaatimukset:
+
+**HTML-rakenne:** Hero-osiossa käytä aina tätä kerrosrakennetta:
+```html
+<div class="hero-bg">
+  <img class="hero-bg-img" src="..." alt="...">
+  <div class="hero-overlay"></div>  <!-- pakollinen peittokerros -->
+</div>
+<div class="hero-content">
+  <!-- tekstit tänne -->
+</div>
+```
+
+**CSS-vaatimukset overlay:lle (EI voi jättää pois):**
+- `.hero-overlay`: `position:absolute; inset:0; background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.35) 100%);`
+- Mobiilinäkymässä overlay vähintään `rgba(0,0,0,0.60)` koko alueella
+- Vaalea teksti (#ffffff tai lähellä) overlay:n päällä AINA — ei koskaan tumma teksti kuvan päällä
+- Lisää `text-shadow: 0 1px 4px rgba(0,0,0,0.5)` kaikkiin hero-teksteihin (.hero h1, .hero h2, .hero p)
+- WCAG AA: normaali teksti min. 4.5:1, suuri teksti (≥24px) min. 3:1 kontrasteilla
+
+**Tarkista ennen julkaisua:** Jos hero-osiossa on värikäs overlay (esim. vihreä/sininen), varmista että overlay on tarpeeksi tumma ja että teksti on #ffffff tai muu vaaleudeltaan ≥90% sävy.
+
 ## TOIMINTAOHJEET
 
 1. Lue CSV-data tarkkaan – käytä **oikeita asiakastietoja**, ei placeholdereita
