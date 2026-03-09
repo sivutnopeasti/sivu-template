@@ -275,14 +275,18 @@ EI single-page-scroll-navigaatiota — oikeat sivulinkit.
 
 **Yhteinen style.css ja main.js** linkitetään jokaisesta HTML-tiedostosta.
 
-**Vastausmuoto:** Palauta jokainen sivu omana koodilohkonaan `<!-- FILE: tiedostonimi.html -->` -kommentilla:
+**Vastausmuoto:** Palauta jokainen sivu omana `=== filename.html ===` -lohkonaan:
+```
+=== index.html ===
 ```html
-<!-- FILE: index.html -->
 <!DOCTYPE html>
 ...
-<!-- FILE: palvelut.html -->
+```
+=== palvelut.html ===
+```html
 <!DOCTYPE html>
 ...
+```
 ```
 
 Jos `sivu_maara` = 1 tai kenttä puuttuu: toimi normaalisti, generoi vain `index.html`.
