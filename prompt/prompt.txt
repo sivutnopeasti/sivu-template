@@ -14,6 +14,10 @@ Nopeatsivut.fi tuottaa edullisia verkkosivuja pienyrityksille. Jokaisen asiakkaa
 - Painike, joka ohjaa ottamaan yhteyttä.
 - Responsiivinen hampurilaisvalikko mobiilissa
 
+## FOOTER – PAKOLLINEN
+Jokaisen sivun footerissa **täytyy olla** linkki: `<a href="tietosuoja.html">Tietosuojaseloste</a>`
+Ei muuta pakollista sisältöä, mutta tyypillisesti myös yhteystiedot ja copyright.
+
 ## SYÖTTÖDATA – CSV-SARAKKEET
 
 Saat asiakkaan tiedot CSV-muodossa viestin lopussa. Alla sarakkeiden selitykset:
