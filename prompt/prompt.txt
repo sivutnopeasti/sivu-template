@@ -93,6 +93,27 @@ Tulkitse väriteemaa luovasti äläkä kirjaimellisesti. Käytä sävyjä, gradi
 - **Hieroja**: Hoitomuodot, linkki ajanvaraukseen, lahjakortit, Kela-korvaustiedot jos relevantti
 - **LVI / Sähkö / Rakennus / Maanrakennus**: Tarjouspyyntölomake yhteydenoton sijaan, toimialue näkyvästi, pätevyydet ja sertifikaatit omana osionaan, viitekohteet/referenssit galleriaksi tai listaksi – ei ajanvarauskalenteria
 
+### PÄTEVYYDET-OSION RAKENNE (pakollinen kun patevyydet-kenttä ei ole tyhjä)
+
+Jokainen pätevyys tai sertifikaatti on oma elementtinsä tässä rakenteessa:
+```html
+<div class="patevyys-item">
+  <span class="patevyys-nimi">RALA-pätevyys</span>
+  <img class="cert-logo-img" src="" alt="RALA-pätevyys logo" loading="lazy">
+</div>
+```
+
+CSS-vaatimukset (PAKOLLINEN — lisää tämä style.css:ään):
+```css
+.patevyys-list { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: center; }
+.patevyys-item { display: flex; align-items: center; gap: 0.75rem; }
+.patevyys-nimi { font-weight: 600; }
+.cert-logo-img { max-height: 48px; width: auto; object-fit: contain; }
+img.cert-logo-img:not([src]), img.cert-logo-img[src=""] { display: none; }
+```
+
+`src=""` piilottaa tyhjän kuvapaikan lopullisella sivustolla. Editori näyttää sen klikattavana "lisää logo" -alueena.
+
 ## TEKNISET VAATIMUKSET
 
 ### HTML/CSS/JS
@@ -109,6 +130,8 @@ Tulkitse väriteemaa luovasti äläkä kirjaimellisesti. Käytä sävyjä, gradi
 - Meta description: lyhyt kuvaus palveluista
 - Open Graph -tagit some-jakoa varten
 - Schema.org LocalBusiness structured data (nimi, osoite, puhelin, aukioloajat)
+- **H1 sisältää aina toimialan + paikkakunnan** – esim. "LVI-palvelut Vaasassa", "Kampaamo Tampereella", "Sähköasennus Pirkanmaalla". Ei geneerinen "Tervetuloa" tai pelkkä yrityksen nimi.
+- **H2-otsikot** osioissa käyttävät luontevasti toimiala- ja paikkakuntasanoja jos mahdollista
 
 ### Yhteydenottolomake
 - Nimi, puhelin/sähköposti, viesti -kentät
